@@ -25,3 +25,22 @@ Setstate() digunakan untuk memberikan informasi kepada framework tentang adanya 
 3. Mengganti text dengan membuat sebuah conditional berdasarkan nilai counter, yaitu saat genap dan ganjil
 4. Mengatur padding untuk floatingactionbutton yang baru
 5. Menambahkan children yang berisi button increment dan button decrement.
+
+# TUGAS 8
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+Navigator.push akan menambahkan rute ke tumpukan sebelumnya seperti stack. Navigator.pushReplacement akan menggantikan halaman halaman sekarang dengan yang baru.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Card : untuk menampung tampilan data
+- TextFormField : untuk membuat input
+- DropdownButtonFormField : untuk membuat dropdown
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed). 
+- onPressed 
+- onTap 
+- onChanged 
+- onSaved
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator bekerja seperti stack sehingga ketika terjadi push, maka layar sebelumnya akan ditimpa dengan layar baru.
+
