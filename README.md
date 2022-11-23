@@ -44,3 +44,8 @@ Navigator.push akan menambahkan rute ke tumpukan sebelumnya seperti stack. Navig
 ## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 Navigator bekerja seperti stack sehingga ketika terjadi push, maka layar sebelumnya akan ditimpa dengan layar baru.
 
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Mmebuat drawer pada tiap file 
+2. Membuat file form.dart dan dataBudget.dart untuk membuat halaman form dan menampilkan data
+3. Mmebuat budget.dart yang beisi class Budget untuk membuat data budget
+5. Menampilkan data yang diinput pada file dataBudget.dart

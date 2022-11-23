@@ -1,7 +1,7 @@
-import 'package:counter_7/dataBudget.dart';
+import 'package:counter_7/page/dataBudget.dart';
 import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/Budget.dart';
+import 'package:counter_7/model/Budget.dart';
 
 void main() {
   runApp(const MyFormPage());
@@ -60,7 +60,7 @@ class _MyFormPageState extends State<MyFormPage> {
                   context,
                   MaterialPageRoute(builder: (context) => const MyDataPage()),
                 );
-              })
+              }),
         ])),
         body: Form(
             key: _formKey,
@@ -162,18 +162,23 @@ class _MyFormPageState extends State<MyFormPage> {
                         ),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            print("n");
                             Budget.listBudget.add(Budget(
                               judul: _judul,
                               nominal: _nominal,
                               jenis: _pilih,
                             ));
-                            print(Budget.listBudget[0].judul);
+
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const MyFormPage()),
                             );
+
+                            for (var i in Budget.listBudget) {
+                              print("judul : " + i.judul);
+                              print("nominal : " + i.nominal.toString());
+                              print("pilihan : " + i.jenis);
+                            }
                           }
                         },
                         child: const Text(

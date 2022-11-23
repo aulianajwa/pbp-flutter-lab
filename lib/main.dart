@@ -1,6 +1,7 @@
+import 'package:counter_7/page/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/dataBudget.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/dataBudget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,48 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         // Menambahkan drawer menu
-        drawer: Drawer(
-          child: Column(
-            children: [
-              ListTile(
-                title: const Text('Counter_7'),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyHomePage()),
-                  );
-                },
-              ),
-              // ListTile(
-              //   title: const Text('Tambah Budget'),
-              //   onTap: () {
-              //     Navigator.pushReplacement(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const MyFormPage()),
-              //     );
-              //   },
-              // ),
-              ListTile(
-                  title: const Text('Tambah Budget'),
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MyFormPage()),
-                    );
-                  }),
-              ListTile(
-                title: const Text('Data Budget'),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyDataPage()),
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
+        drawer: buildDrawer(context),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
