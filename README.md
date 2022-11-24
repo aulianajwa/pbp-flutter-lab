@@ -49,3 +49,28 @@ Navigator bekerja seperti stack sehingga ketika terjadi push, maka layar sebelum
 2. Membuat file form.dart dan dataBudget.dart untuk membuat halaman form dan menampilkan data
 3. Mmebuat budget.dart yang beisi class Budget untuk membuat data budget
 5. Menampilkan data yang diinput pada file dataBudget.dart
+
+
+# TUGAS 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, tetapi data yang diambil tidak terstruktur dengan baik. Dengan membuat model terlebih dahulu, data yang didapatkan akan lebih terstruktur dan terhindar dari kesalahan pengambilan data. 
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- FutureBuilder : Membuat sebuah widget berdasarkan snapshot terbaru
+- ElevatedButton : Membuat button di bawah page
+- ListView : Membuat list wifget
+- MaterialPageRoute : Mengganti screen 
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Menambahkan dependency http
+- Membuat model data
+- Melakukan http request, JSON response akan diubah menjadi model yang dibuat
+- Menampilkan data dari model menggunakan FutureBuilder
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan mywatchlist pada drawer
+2. Membuat model watchlist dan page mywatchlist
+3. Melakukan fetch data dari url
+4. Menampilkan data pada card
+5. Menampilkan detail data pada mywatchlist detail, dikirimkan melalui Navigator.push

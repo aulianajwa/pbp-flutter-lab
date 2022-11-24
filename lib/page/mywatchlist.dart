@@ -47,13 +47,27 @@ class _MyWatchListState extends State<MyWatchList> {
                                     horizontal: 5, vertical: 5),
                                 child: Card(
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10)),
+                                      borderRadius: BorderRadius.circular(10),
+                                      side: BorderSide(
+                                        color: snapshot.data![index].watched
+                                            ? Colors.green
+                                            : Colors.red,
+                                      )),
                                   child: ListTile(
                                     title: Text(
                                         "${snapshot.data![index].title}",
                                         style: const TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold)),
+                                    trailing: Checkbox(
+                                      value: snapshot.data![index].watched,
+                                      onChanged: (bool? newValue) {
+                                        setState(() {
+                                          snapshot.data![index].watched =
+                                              !snapshot.data![index].watched;
+                                        });
+                                      },
+                                    ),
                                     onTap: () {
                                       Navigator.push(
                                           context,

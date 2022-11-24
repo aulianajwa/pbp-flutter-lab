@@ -63,6 +63,18 @@ class MyWatchListPage extends StatelessWidget {
           ],
         ),
       ),
+      persistentFooterButtons: [
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green,
+            minimumSize: const Size.fromHeight(40),
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Back', style: TextStyle(fontSize: 13)),
+        )
+      ],
     );
   }
 }
